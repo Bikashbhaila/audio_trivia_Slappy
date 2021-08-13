@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speech Recognition</title>
+</head>
+<body>
+    <div id="speechContainer">
+        <h1>Upload a wav File</h1>
+        <form method="POST" enctype="multipart/form-data">
+            <input type="file" name ="file">
+            <br>
+            <input type="submit" value="Transcribe">
+        </form>
+        
+        {% if transcript != "" %}
+        <div id="Transcript_container"></div>
+        <h1>Transcript</h1>
+        <p>{{transcript}}</p>
+        {% endif %}
+
+
+    </div>
+</body>
+</html>
